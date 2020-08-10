@@ -42,6 +42,7 @@ def simulation_verlet(simulation_time, dt):
     for i in range(0, simulation_length):
 
         # Did not calculate the motion of the Sun since Sun will be in the center of the graph
+        # Perform verlet integration step for all planets
         for p in range(1, 9):
             entity_position_x[p, i + 1] = entity_position_x[p, i] + (entity_velocity_x[p, i] +
                                                                      0.5 * entity_acc_x[p, i] * dt) * dt
@@ -152,6 +153,7 @@ def simulation_Runge_kutta_4rd(simulation_time, dt):
     for i in range(0, simulation_length):
 
         # Did not calculate the motion of the Sun since Sun will be in the center of the graph
+        # Perform RK4 integration step for all planets
         for p in range(1, 9):
             k1_xa, k1_ya = calc_acc(entity_position_x[p, i], entity_position_x[:, i], entity_position_y[p, i],
                                     entity_position_y[:, i], p, entity_mass)
