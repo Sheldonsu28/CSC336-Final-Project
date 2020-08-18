@@ -1,89 +1,81 @@
-C:\Users\sheld\Anaconda3\python.exe "C:/Users/sheld/PycharmProjects/CSC336 FinalProject/Simulation.py"
+C:\ProgramData\Anaconda3\python.exe C:/Users/sheld/PycharmProjects/CSC336-Final-Project/Simulation.py
 =================================Start dt=3600 1 years=============================
 -------------------Verlet-----------------------
 Initializing...
 Simulating...
 There are 8761 simulation steps in total
-Verlet simulation took: 1.7814128398895264 s to finish
-The energy difference for Verlet method is:1.056511565157664e+31 Js
+Verlet simulation took: 1.4658772945404053 s to finish
+The energy difference for Verlet method is:0.6976474135713618%
 -------------------RK4-----------------------
 Initializing...
 Simulating...
 There are 8761 simulation steps in total
-RK4 simulation took: 6.144391298294067 s to finish
-The energy difference for RK4 method is:1.0569923603351954e+31 Js
+RK4 simulation took: 5.0130934715271 s to finish
+The energy difference for RK4 method is:0.698478277558383%
 =================================Start dt=1800 1 years=============================
 -------------------Verlet-----------------------
 Initializing...
 Simulating...
 There are 17522 simulation steps in total
-Verlet simulation took: 3.6588284969329834 s to finish
-The energy difference for Verlet method is:1.0566981177593217e+31 Js
+Verlet simulation took: 2.940660238265991 s to finish
+The energy difference for Verlet method is:0.698063871205381%
 -------------------RK4-----------------------
 Initializing...
 Simulating...
 There are 17522 simulation steps in total
-RK4 simulation took: 12.234779119491577 s to finish
-The energy difference for RK4 method is:1.0568939132275353e+31 Js
+RK4 simulation took: 10.015254497528076 s to finish
+The energy difference for RK4 method is:0.6984784171734635%
 =================================Start dt=3600 17 years============================
 -------------------Verlet-----------------------
 Initializing...
 Simulating...
 There are 148938 simulation steps in total
-Verlet simulation took: 30.726667642593384 s to finish
-The energy difference for Verlet method is:4.537621903259722e+31 Js
+Verlet simulation took: 25.035300254821777 s to finish
+The energy difference for Verlet method is:12.471001829359542%
 -------------------RK4-----------------------
 Initializing...
 Simulating...
 There are 148938 simulation steps in total
-RK4 simulation took: 103.73749327659607 s to finish
-The energy difference for RK4 method is:4.537301505886598e+31 Js
+RK4 simulation took: 85.500159740448 s to finish
+The energy difference for RK4 method is:12.472221620979168%
 =================================Start dt=1800 17 years============================
 -------------------Verlet-----------------------
 Initializing...
 Simulating...
 There are 297877 simulation steps in total
-Verlet simulation took: 61.17584991455078 s to finish
-The energy difference for Verlet method is:4.537524937860954e+31 Js
+Verlet simulation took: 50.099233865737915 s to finish
+The energy difference for Verlet method is:12.471731183976807%
 -------------------RK4-----------------------
 Initializing...
 Simulating...
 There are 297877 simulation steps in total
-RK4 simulation took: 211.40157318115234 s to finish
-The energy difference for RK4 method is:4.537341011762058e+31 Js
+RK4 simulation took: 171.14948058128357 s to finish
+The energy difference for RK4 method is:12.472333823376706%
 =================================Start dt=3600 165 years ==========================
 -------------------Verlet-----------------------
 Initializing...
 Simulating...
 There are 1445583 simulation steps in total
-Verlet simulation took: 303.68858194351196 s to finish
-The energy difference for Verlet method is:6.576958908201539e+31 Js
-C:/Users/sheld/PycharmProjects/CSC336 FinalProject/Simulation.py:89: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
-  plt.savefig("Verlet {}_dt{}.png".format(simulation_time / 3.154e+7, dt))
+Verlet simulation took: 243.77072715759277 s to finish
+The energy difference for Verlet method is:3.799332807131185%
 -------------------RK4-----------------------
 Initializing...
 Simulating...
 There are 1445583 simulation steps in total
-RK4 simulation took: 1036.0408236980438 s to finish
-The energy difference for RK4 method is:6.577071881979962e+31 Js
-C:/Users/sheld/PycharmProjects/CSC336 FinalProject/Simulation.py:214: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
-  plt.savefig("RK4 {}_dt{}.png".format(simulation_time / 3.154e+7, dt))
+RK4 simulation took: 828.9779646396637 s to finish
+The energy difference for RK4 method is:3.7950793248499215%
 =================================Start dt=1800 165 years ==========================
 -------------------Verlet-----------------------
 Initializing...
 Simulating...
 There are 2891166 simulation steps in total
-Verlet simulation took: 608.061829328537 s to finish
-The energy difference for Verlet method is:6.577061488390753e+31 Js
-C:/Users/sheld/PycharmProjects/CSC336 FinalProject/Simulation.py:89: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
-  plt.savefig("Verlet {}_dt{}.png".format(simulation_time / 3.154e+7, dt))
+Verlet simulation took: 488.6855766773224 s to finish
+The energy difference for Verlet method is:3.797198640881666%
 -------------------RK4-----------------------
 Initializing...
 Simulating...
 There are 2891166 simulation steps in total
-RK4 simulation took: 2074.5906579494476 s to finish
-The energy difference for RK4 method is:6.577077773202247e+31 Js
-C:/Users/sheld/PycharmProjects/CSC336 FinalProject/Simulation.py:214: UserWarning: Creating legend with loc="best" can be slow with large amounts of data.
-  plt.savefig("RK4 {}_dt{}.png".format(simulation_time / 3.154e+7, dt))
+RK4 simulation took: 1658.6133966445923 s to finish
+The energy difference for RK4 method is:3.7950795420372447%
 
 Process finished with exit code 0

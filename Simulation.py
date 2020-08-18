@@ -82,7 +82,7 @@ def simulation_verlet(simulation_time, dt):
 
     diff = calculate_energy_diff(entity_position_x, entity_position_y, entity_velocity_x, entity_velocity_y,
                                  entity_mass)
-    print("The energy difference for Verlet method is:{} Js".format(abs(diff)))
+    print("The energy difference for Verlet method is:{}%".format(diff))
     plt.legend()
     plt.title("Verlet Planet Trajectory simulation for {} years".format(simulation_time / 3.154e+7))
     plt.xlabel("distance, unit: m")
@@ -97,10 +97,10 @@ def calculate_energy_diff(xp, yp, xv, yv, m):
     r_initial = np.sqrt((xp[1:, 0] ** 2) + (yp[1:, 0] ** 2))
     r_final = np.sqrt((xp[1:, -1] ** 2) + (yp[1:, -1] ** 2))
 
-    inital_U = np.sum(- G * m[0] * (m[1:] / r_initial))
-    Final_U = np.sum(- G * m[0] * (m[1:] / r_final))
+    inital_U = np.sum(G * m[0] * (m[1:] / r_initial))
+    Final_U = np.sum(G * m[0] * (m[1:] / r_final))
 
-    return (initial_KE + inital_U) - (Final_KE + Final_U)
+    return abs(((initial_KE + inital_U) - (Final_KE + Final_U)))*100/(initial_KE + inital_U)
 
 
 def calc_acc(px, other_px, py, other_py, p, mass):
@@ -207,9 +207,9 @@ def simulation_Runge_kutta_4rd(simulation_time, dt):
         else:
             plt.plot(result[p][0], result[p][1], label=p)
 
-
-    diff = calculate_energy_diff(entity_position_x, entity_position_y, entity_velocity_x, entity_velocity_y, entity_mass)
-    print("The energy difference for RK4 method is:{} Js".format(abs(diff)))
+    diff = calculate_energy_diff(entity_position_x, entity_position_y, entity_velocity_x, entity_velocity_y,
+                                 entity_mass)
+    print("The energy difference for RK4 method is:{}%".format(diff))
     plt.legend()
     plt.title("RK4 Planet Trajectory simulation for {} years".format(simulation_time / 3.154e+7))
     plt.xlabel("distance, unit: m")
@@ -218,5 +218,35 @@ def simulation_Runge_kutta_4rd(simulation_time, dt):
 
 
 if __name__ == "__main__":
+    print("=================================Start dt=3600 1 years=============================")
+    print("-------------------Verlet-----------------------")
+    simulation_verlet(3.154e+7, 3600)
+    print("-------------------RK4-----------------------")
+    simulation_Runge_kutta_4rd(3.154e+7, 3600)
+    print("=================================Start dt=1800 1 years=============================")
+    print("-------------------Verlet-----------------------")
+    simulation_verlet(3.154e+7, 1800)
+    print("-------------------RK4-----------------------")
+    simulation_Runge_kutta_4rd(3.154e+7, 1800)
+
+    print("=================================Start dt=3600 17 years============================")
+    print("-------------------Verlet-----------------------")
+    simulation_verlet(3.154e+7 * 17, 3600)
+    print("-------------------RK4-----------------------")
+    simulation_Runge_kutta_4rd(3.154e+7 * 17, 3600)
+    print("=================================Start dt=1800 17 years============================")
+    print("-------------------Verlet-----------------------")
+    simulation_verlet(3.154e+7 * 17, 1800)
+    print("-------------------RK4-----------------------")
+    simulation_Runge_kutta_4rd(3.154e+7 * 17, 1800)
+
+    print("=================================Start dt=3600 165 years ==========================")
+    print("-------------------Verlet-----------------------")
     simulation_verlet(3.154e+7 * 165, 3600)
+    print("-------------------RK4-----------------------")
     simulation_Runge_kutta_4rd(3.154e+7 * 165, 3600)
+    print("=================================Start dt=1800 165 years ==========================")
+    print("-------------------Verlet-----------------------")
+    simulation_verlet(3.154e+7 * 165, 1800)
+    print("-------------------RK4-----------------------")
+    simulation_Runge_kutta_4rd(3.154e+7 * 165, 1800)
